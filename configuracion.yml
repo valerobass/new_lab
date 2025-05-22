@@ -1,0 +1,39 @@
+name: kiko_clab
+mgmt:
+  network: mgmt
+  ipv4-subnet: 172.22.0.0/24
+
+topology:
+
+  spine1:
+    kind: cisco_iol
+    image: vrnetlab/cisco_iol:1.0.0
+    startup-config: configs/spine1.cfg.partial
+ 
+  leaf1:
+    kind: cisco_iol
+    image: vrnetlab/cisco_iol:L2-1.0.0
+    type: L2
+    startup-config: configs/leaf1.cfg.partial
+    
+  srv-ftp:
+    kind: linux
+    image: alpine:latest
+    network-mode: none
+    exec: 
+      - ip link set dev eth1 up
+      - ip addr add 10.10.10.2/24 dev eth1
+      
+
+  pc_admin1:
+    kind: linux
+    image: alpine:latest
+    network-mode: none
+    exec: 
+      - ip link set dev eth1 up
+      - ip addr add 10.10.10.3/27 dev eth1
+  
+  links:
+    - endpoints: ["leaf1:e0/1", "pc_admin:eth1"]
+    - endpoints: ["leaf1:e0/2", "spine1:e0/1"]
+    - endpoints: ["spine1:e0/2", "srv-ftp:eth1"]
