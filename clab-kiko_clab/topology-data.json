@@ -27,7 +27,7 @@
       "image": "vrnetlab/cisco_iol:L2-1.0.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.22.0.4",
+      "mgmt-ipv4-address": "172.22.0.5",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
@@ -89,7 +89,7 @@
       "image": "vrnetlab/cisco_iol:1.0.0",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.22.0.5",
+      "mgmt-ipv4-address": "172.22.0.4",
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
@@ -145,28 +145,28 @@
     {
       "a": {
         "node": "leaf1",
-        "interface": "eth1",
-        "mac": "aa:c1:ab:b7:74:43",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ce:c8:7c",
         "peer": "z"
       },
       "z": {
         "node": "pc_admin1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:32:c2:36",
+        "mac": "aa:c1:ab:59:89:1b",
         "peer": "a"
       }
     },
     {
       "a": {
         "node": "leaf1",
-        "interface": "eth2",
-        "mac": "aa:c1:ab:a0:35:bd",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:95:e1:20",
         "peer": "z"
       },
       "z": {
         "node": "spine1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:84:d5:e9",
+        "mac": "aa:c1:ab:9e:f1:54",
         "peer": "a"
       }
     },
@@ -174,13 +174,13 @@
       "a": {
         "node": "spine1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:82:f4:9f",
+        "mac": "aa:c1:ab:1e:36:01",
         "peer": "z"
       },
       "z": {
         "node": "srv-ftp",
         "interface": "eth1",
-        "mac": "aa:c1:ab:2b:63:b1",
+        "mac": "aa:c1:ab:32:c4:99",
         "peer": "a"
       }
     }

@@ -1,0 +1,17 @@
+hostname Router-Cisco
+!
+
+interface Ethernet0/1
+   no shutdown
+
+interface Ethernet0/1.10
+   encapsulation dot1Q 10
+   ip address 10.10.10.1 255.255.255.224
+   no shutdown
+! 
+
+ip route 10.10.10.0 255.255.255.224 Ethernet0/1.10
+
+exit
+!
+write memory

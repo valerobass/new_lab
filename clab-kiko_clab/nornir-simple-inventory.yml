@@ -3,12 +3,12 @@ leaf1:
     username: admin
     password: admin
     platform: cisco_iol
-    hostname: 172.22.0.4
+    hostname: 172.22.0.5
 spine1:
     username: admin
     password: admin
     platform: cisco_iol
-    hostname: 172.22.0.5
+    hostname: 172.22.0.4
 pc_admin1:
     username: 
     password: 
