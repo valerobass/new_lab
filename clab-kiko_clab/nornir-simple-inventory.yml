@@ -1,0 +1,21 @@
+---
+leaf1:
+    username: admin
+    password: admin
+    platform: cisco_iol
+    hostname: 172.22.0.4
+spine1:
+    username: admin
+    password: admin
+    platform: cisco_iol
+    hostname: 172.22.0.5
+pc_admin1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 
+srv-ftp:
+    username: 
+    password: 
+    platform: linux
+    hostname: 
